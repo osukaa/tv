@@ -1,6 +1,7 @@
 'use strict';
-host = 'localhost';
-port = 8000;
+
+window.host = 'localhost';
+window.port = 8000;
 
 require('es5-shim');
 
@@ -43,9 +44,6 @@ Backbone.$ = require('jquery');
 
 require('../../source/js/utils/handlebarsHelpers');
 
-if (window.mochaPhantomJS) {
-    mochaPhantomJS.run();
-}
-else {
-    mocha.run();
-}
+console.log('Is this running?');
+
+mocha.run();

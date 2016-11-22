@@ -54,10 +54,10 @@
     "watchify": "3.6.X"
   },
   "scripts": {
-    "test": "mocha-phantomjs -p node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs test/client/index.html --hooks test/client/phantomHooks.js && lab test/index.js -a code -t 100 -L",
+    "test": "mocha-phantomjs -p node_modules/phantomjs-prebuilt/bin/phantomjs test/client/index.html --hooks test/client/phantomHooks.js -t 20000 -f super-dump.log && lab test/index.js -a code -t 100 -L",
     "test-client-cov": "npm run build-test && npm run test && istanbul report --root coverage lcov",
     "watch-js": "watchify -t hbsfy -e source/js/app.js source/js/**/*.js -o public/js/main.js -d -v",
-    "watch-test": "watchify -t hbsfy -e test/client/main.js test/client/**/*.js -o test/bundle.js -d -v",
+    "watch-test": "watchify -t hbsfy -e test/client/main.js -o test/bundle.js -d -v",
     "watch-styles": "node-sass source/styles/style.scss public/css/style.css -w source/styles -r",
     "watch": "npm run build && npm run watch-js & npm run watch-test & npm run watch-styles & npm run post-js",
     "copy-fonts": "cp -R source/fonts/vendor/bootstrap/** public/fonts",
