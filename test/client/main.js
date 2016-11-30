@@ -44,6 +44,4 @@ Backbone.$ = require('jquery');
 
 require('../../source/js/utils/handlebarsHelpers');
 
-console.log('Is this running?');
-
 mocha.run();
