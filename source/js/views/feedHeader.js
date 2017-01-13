@@ -3,6 +3,7 @@
 
 const Backbone = require('backbone');
 
+const internals = {};
 
 exports = module.exports = internals.FeedHeaderView = Backbone.View.extend({
 

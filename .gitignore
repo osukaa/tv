@@ -20,3 +20,4 @@ complexity.md
 public/
 test/bundle.js
 coverage/
+*.log
